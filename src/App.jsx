@@ -1,28 +1,26 @@
-
-import {useState} from 'react';
-import { BrowserRouter } from "react-router-dom"
-
+import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { QuizProvider } from "./contexts/QuizContext";
 import MainHeader from "./components/mainHeader/MainHeader";
-import MainContent from './components/mainContent/MainContent';
+import MainContent from "./components/mainContent/MainContent";
 
 function App() {
-
   const [darkModeOn, setDarkModeOn] = useState(false);
 
-  const toggleDarkMode = ()=>{
+  const toggleDarkMode = () => {
     setDarkModeOn(!darkModeOn);
-  }
-
+  };
 
   return (
-    <div className={`app-wrapper ${darkModeOn && 'dark-mode-app-wrapper'}`}>
+    <div className={`app-wrapper ${darkModeOn && "dark-mode-app-wrapper"}`}>
       <BrowserRouter>
-        {/* QUIZ PROVIDER */}
-        <MainHeader darkModeOn={darkModeOn} toggleDarkMode={toggleDarkMode}/>
-        <MainContent/>
+        <QuizProvider>
+          <MainHeader darkModeOn={darkModeOn} toggleDarkMode={toggleDarkMode} />
+          <MainContent />
+        </QuizProvider>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

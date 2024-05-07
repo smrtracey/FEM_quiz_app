@@ -1,3 +1,6 @@
+
+import {useEffect} from 'react';
+import { useQuizContext } from "../../contexts/QuizContext";
 import jsonData from "@/assets/data.json";
 
 import htmlIcon from "@/assets/images/icon-html.svg";
@@ -11,9 +14,16 @@ const quizData = JSON.parse(JSON.stringify(jsonData));
 const iconsArray = [htmlIcon, cssIcon, jsIcon, accessibilityIcon];
 
 const StartMenu = () => {
+
+  const {dispatch} = useQuizContext();
+
   const handleCardClick = (quiz) => {
-    // setSelectedQuiz.
+    dispatch({type:'SET_SELECTED_QUIZ', payload:quiz});
   };
+
+  useEffect(()=>{
+    dispatch({type:'SET_SELECTED_QUIZ', payload:null});
+  },[])
 
   return (
     <div className="start-menu-wrapper">
