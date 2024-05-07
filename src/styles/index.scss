@@ -28,6 +28,12 @@
   --clr-accessibility-bg: hsl(277 100 95);
 }
 
+
+.dark-mode-app-wrapper{
+  background-color: var(--clr-dark-bg);
+}
+
+
 html{
   font-family: 'Rubik', sans-serif;
   font-style: normal;
@@ -38,4 +44,14 @@ body{
   line-height: 150%;
   font-weight: 400;
   background-color: var(--clr-main-bg);
+}
+
+.app-wrapper{
+  height: 100vh;
+  background-image: url('../assets/images/pattern-background-mobile-light.svg');
+}
+
+.dark-mode-app-wrapper{
+  background-image: url('../assets/images/pattern-background-mobile-dark.svg');
+
 }
