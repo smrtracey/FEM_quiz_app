@@ -31,6 +31,9 @@
 
 .dark-mode-app-wrapper{
   background-color: var(--clr-dark-bg);
+  --clr-primary-text: white;
+  --clr-secondary-text: var(--clr-secondary-text-dark);
+  --clr-white: var(--clr-dark-bg-2);
 }
 
 

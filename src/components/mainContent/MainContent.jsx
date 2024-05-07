@@ -1,5 +1,6 @@
 import AppRoutes from '@/routing/AppRoutes';
 
+import './mainContent.scss';
 
 const MainContent = () => {
   return (
