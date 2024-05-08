@@ -1,49 +1,92 @@
-.main-header{
-    height:72px;
-    width: 100vw;
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
+.main-header {
+  height: 72px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    img{
-        width:16px;
-        aspect-ratio: 1;
-        margin: 0 5px;
-    }
+  img {
+    width: 16px;
+    aspect-ratio: 1;
+    margin: 0 5px;
+  }
 }
 
-.toggle-wrapper{
+.quiz-selected-header {
+  justify-content: space-between;
+}
+
+.main-header-left {
+  display: flex;
+  align-items: center;
+
+  .html-header-image-wrapper {
+    background-color: var(--clr-html-bg);
+  }
+
+  .css-header-image-wrapper {
+    background-color: var(--clr-css-bg);
+  }
+
+  .javascript-header-image-wrapper {
+    background-color: var(--clr-javascript-bg);
+  }
+
+  .accessibility-header-image-wrapper {
+    background-color: var(--clr-accessibility-bg);
+  }
+
+  .image-wrapper {
+    width: 40px;
+    aspect-ratio: 1;
     display: flex;
-    margin-right: 24px;
-}
-
-.toggle-oval{
-    background-color: var(--clr-primary-highlight);
-    width: 32px;
-    height: 20px;
-    border-radius: 50vw;
-    display:flex;
     align-items: center;
-    padding: 0 3px;
+    justify-content: center;
+    margin-right: 16px;
+  }
 
-    .inner-circle{
-        width:12px;
-        aspect-ratio: 1;
-        background-color: white;
-        border-radius: 50%;
-    }
+  img{
+    width: 28px;
+    aspect-ratio: 1;
+  }
 
-    .inner-cirlce{
-        transform: translateX(0);
-        transition: translate 0.5s;
-    }
+  .header-text{
+    font-weight: 500;
+    font-size: 18px;
+    color:var(--clr-primary-text);
+  }
 
-    .inner-circle-right{
-        transform: translateX(12px);
-        transition: translate 0.5s;
-
-    }
-
+  margin-left: 24px;
 }
 
+.toggle-wrapper {
+  display: flex;
+  margin-right: 24px;
+}
 
+.toggle-oval {
+  background-color: var(--clr-primary-highlight);
+  width: 32px;
+  height: 20px;
+  border-radius: 50vw;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+
+  .inner-circle {
+    width: 12px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .inner-cirlce {
+    transform: translateX(0);
+    transition: translate 0.5s;
+  }
+
+  .inner-circle-right {
+    transform: translateX(12px);
+    transition: translate 0.5s;
+  }
+}
