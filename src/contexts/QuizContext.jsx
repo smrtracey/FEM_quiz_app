@@ -57,6 +57,15 @@ const quizReducer = (state, action)=>{
                 isAnswerCorrect: action.payload
             }
 
+        case 'GO_TO_NEXT_QUESTION':
+            return {
+                ...state,
+                currentQuestion: action.payload,
+                selectedAnswer:null,
+                submittedAnswer:false,
+                isAnswerCorrect: null
+            }
+
         default: return state
     }
 }
